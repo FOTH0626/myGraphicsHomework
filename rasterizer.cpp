@@ -6,7 +6,7 @@ TGAColor white = TGAColor(255,255,255,255);
 
 // Bresenham's line drawing algorithm
 // Code taken from a stack overflow answer: https://stackoverflow.com/a/16405254
-void drawLine(TGAImage &image, Eigen::Vector2f point1,Eigen::Vector2f point2, TGAColor){
+void drawLine(TGAImage &image, Eigen::Vector2f point1,Eigen::Vector2f point2, TGAColor drawColor){
     auto x1 = point1.x();
     auto y1 = point1.y();
     auto x2 = point2.x();
@@ -34,9 +34,9 @@ void drawLine(TGAImage &image, Eigen::Vector2f point1,Eigen::Vector2f point2, TG
             x=x2;
             y=y2;
             xe=x1;
-        }
+        }   
         Eigen::Vector2i point = Eigen::Vector2i(x, y);
-        image.set(point.x(),point.y(),white);
+        image.set(point.x(),point.y(),drawColor);
         for(i=0;x<xe;i++)
         {
             x=x+1;
@@ -56,8 +56,8 @@ void drawLine(TGAImage &image, Eigen::Vector2f point1,Eigen::Vector2f point2, TG
                 }
                 px=px+2*(dy1-dx1);
             }
-Eigen::Vector2f point = Eigen::Vector2f(x, y);
-            image.set(point.x(),point.y(),white);
+        Eigen::Vector2f point = Eigen::Vector2f(x, y);
+        image.set(point.x(),point.y(),drawColor);
         }
     }
     else
@@ -75,7 +75,7 @@ Eigen::Vector2f point = Eigen::Vector2f(x, y);
             ye=y1;
         }
         Eigen::Vector2f point = Eigen::Vector2f(x, y);
-            image.set(point.x(),point.y(),white);
+            image.set(point.x(),point.y(),drawColor);
         for(i=0;y<ye;i++)
         {
             y=y+1;
@@ -97,7 +97,7 @@ Eigen::Vector2f point = Eigen::Vector2f(x, y);
             }
 //            delay(0);
             Eigen::Vector2f point = Eigen::Vector2f(x, y);
-            image.set(point.x(),point.y(),white);
+            image.set(point.x(),point.y(),drawColor);
         }
     }
 }
