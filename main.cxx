@@ -25,7 +25,7 @@ int computeCode(double x, double y,double xmin,double xmax,double ymin,double ym
     return code;
 }
 
-void cohenSutherland(int xmin, int xmax, int ymin, int ymax, int x1, int y1, int x2, int y2,TGAImage& image){
+void cohenSutherland(int xmin, int xmax, int ymin, int ymax, double x1, double y1, double x2, double y2,TGAImage& image){
     drawLine(image,Eigen::Vector2f(xmin,ymin),Eigen::Vector2f(xmax,ymin),White);
     drawLine(image, Eigen::Vector2f(xmin,ymax), Eigen::Vector2f(xmax,ymax), White);
     drawLine(image, Eigen::Vector2f(xmin,ymin), Eigen::Vector2f(xmin,ymax), White);
