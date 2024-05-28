@@ -13,10 +13,18 @@ link_directories("/usr/lib/x86_64-linux-gnu")
 find_package(Eigen3 REQUIRED)
 #find_package(jsoncpp REQUIRED)
 
-add_executable(myLittleRenderer 
+add_executable(chinaMap
 main.cpp
+constant.h constant.cpp
 TGAImage.cpp TGAImage.h 
 rasterizer.cpp rasterizer.h
 mvp.h mvp.cpp)
-target_link_libraries( ${PROJECT_NAME} Eigen3::Eigen)
-target_link_libraries( ${PROJECT_NAME} jsoncpp)
+target_link_libraries( chinaMap Eigen3::Eigen)
+target_link_libraries( chinaMap jsoncpp)
+
+add_executable(cohenSutherland
+main.cxx
+rasterizer.cpp rasterizer.h
+constant.h constant.cpp
+TGAImage.cpp TGAImage.h)
+target_link_libraries(cohenSutherland Eigen3::Eigen)

@@ -10,7 +10,7 @@ cd build
 cmake ..
 make 
 ```
-and then you can see the image in the `build` folder which is named `output.tga`
+and then you can see the image in the  folder which is named `chinaMap.tga` and `cohenSutherland.tga`
 
 By the way ,i don'tthink my graphics lesson is acceptable.  
 there's no **rendering pipeline** , no **linear algebra** even the mvp transform , no **rasterisation** .  
