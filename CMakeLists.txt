@@ -23,7 +23,7 @@ target_link_libraries( chinaMap Eigen3::Eigen)
 target_link_libraries( chinaMap jsoncpp)
 
 add_executable(cohenSutherland
-main.cxx
+cohenSutherland.cpp
 rasterizer.cpp rasterizer.h
 constant.h constant.cpp
 TGAImage.cpp TGAImage.h)
