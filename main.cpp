@@ -67,7 +67,7 @@ int main(){
 				// }
 		}
 			image.flip_vertically();
-			image.write_tga_file("../chinaMap.tga");
+			image.write_tga_file("../output/chinaMap.tga");
 	};
 //	drawLine(image, Eigen::Vector2f(0,0), Eigen::Vector2f(1920,1080), TGAColor(255,255,255,255));
 

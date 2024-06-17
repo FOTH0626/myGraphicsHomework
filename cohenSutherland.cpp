@@ -1,6 +1,6 @@
+#include <Eigen/Eigen>
 #include "TGAImage.h"
 #include "constant.h"
-#include <Eigen/Eigen>
 #include "rasterizer.h"
 #include <iostream>
 
@@ -90,6 +90,6 @@ int main ()
     cohenSutherland(560 ,1360 ,240 ,840 ,960 ,540 ,0 ,0 , image);
     //drawLine(image, Eigen::Vector2f(0,0), Eigen::Vector2f(960,540), Green);
     image.flip_vertically(); 
-    image.write_tga_file("../cohenSutherland.tga");
+    image.write_tga_file("../output/cohenSutherland.tga");
     return 0;
 }
